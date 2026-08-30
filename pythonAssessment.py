@@ -1,16 +1,12 @@
 import string
 
-with open("news_article.txt", "r", encoding="utf-8") as file:
-    article_text = file.read()
-
-print(article_text[2:9])
-
 def count_specific_word(text, word):
     words = text.split()
     count = 0
     x = 0
     while x < len(words):
-        if words[x] == word:
+        current_word = words[x].strip(string.punctuation)
+        if current_word == word:
             count += 1
         x += 1
     return count
