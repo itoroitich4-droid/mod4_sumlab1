@@ -6,12 +6,13 @@ with open("news_article.txt", "r", encoding="utf-8") as file:
 print(article_text[2:9])
 
 def count_specific_word(text, word):
-    count=0
-    for x in text.split():
-        if x==word:
-            count+=1
-        else:
-            count+=0
+    words = text.split()
+    count = 0
+    x = 0
+    while x < len(words):
+        if words[x] == word:
+            count += 1
+        x += 1
     return count
 
 def identify_most_common_word(text):
