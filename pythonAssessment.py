@@ -35,7 +35,7 @@ def count_sentences(str):
             count += 1
     return count
 
-def count_paragraphs(str):
+def count_paragraphs(text):
     if text == "":
         return 1
     paragraphs = text.strip().split("\n\n")
