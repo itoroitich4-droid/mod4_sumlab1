@@ -30,7 +30,7 @@ def identify_most_common_word(text):
     return most_common
 
 
-def count_sentences(text):
+def count_sentences(str):
     if text == "":
         return 1
     count = 0
@@ -39,7 +39,7 @@ def count_sentences(text):
             count += 1
     return count
 
-def count_paragraphs(text):
+def count_paragraphs(str):
     if text == "":
         return 1
     paragraphs = text.strip().split("\n\n")
@@ -59,7 +59,3 @@ def calculate_average_word_length(text):
             word_count += 1
     return total_length / word_count
 
-print("Most common word:", identify_most_common_word(article_text))
-print("Average word length:", calculate_average_word_length(article_text))
-print("Number of paragraphs:", count_paragraphs(article_text))
-print("Number of sentences:", count_sentences(article_text))
